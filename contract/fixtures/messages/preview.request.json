@@ -1,0 +1,36 @@
+{
+  "v": 1,
+  "id": 4,
+  "method": "preview",
+  "params": {
+    "rule": {
+      "method": "wildcard",
+      "search": "* - *",
+      "replace": "\\1-\\2",
+      "caseSensitive": false,
+      "numberStart": 1,
+      "numberStep": 1,
+      "resetNumberPerFolder": false,
+      "autoNumberOnConflict": true,
+      "useCreatedDate": false,
+      "operation": "copy",
+      "targetFolder": "D:\\Yedek",
+      "numberStyle": "hexadecimal",
+      "resetNumberPerDate": true,
+      "resetNumberPerTag": "ID3.Album",
+      "shortNames83": true,
+      "useScript": true
+    },
+    "selected": [
+      1,
+      3,
+      5
+    ],
+    "overrides": [
+      {
+        "id": 3,
+        "name": "Özel ad.txt"
+      }
+    ]
+  }
+}

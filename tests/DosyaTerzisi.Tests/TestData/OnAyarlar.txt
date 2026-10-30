@@ -1,0 +1,18 @@
+[Preset]
+; Preset=Yöntem	Betik	Aranan	Yeni ad	Ad      (sekmeyle ayrılır; yöntem: 0 joker, 1 düzenli ifade, 2 çeviri)
+Preset=0		*.*	\Y\m\d\H\M\S.\2	Tarih ve saat
+Preset=0		*.*	??.\2	Sıra no + uzantı
+Preset=0		*.*	??_\1.\2	Sıra no + ad + uzantı
+Preset=0		*.*	\1_??.\2	Ad + sıra no + uzantı
+Preset=0		*-*.*	\2-\1.\3	“-” işaretinin iki yanını değiştir
+Preset=0		*DSC*	\1IMG\2	“DSC” yerine “IMG” yaz
+Preset=1		(.*)\(\d+\)(.*)	\1\2	(n) sil
+Preset=1		(.*)\[\d+\](.*)	\1\2	[n] sil
+Preset=1		(?: - Kopya(?: \(\d+\))?)		“ - Kopya” ibaresini sil
+Preset=1		(\..*)$	\L\1	Uzantıyı küçük harf yap
+Preset=1		((?:[^ \-+~=#$%&_,.(){}\[\]=!]|\.)+)	\L\u\1	Her kelimenin ilk harfi büyük
+Preset=2		a-zA-Z	A-Za-z	Büyük/küçük harfi tersine çevir
+Preset=2		a-z	A-Z	Büyük harf
+Preset=2		A-Z	a-z	Küçük harf
+Preset=2		çğıöşüÇĞİÖŞÜ	cgiosuCGIOSU	Türkçe harfleri sadeleştir
+Preset=2		 	_	Boşlukları alt çizgi yap

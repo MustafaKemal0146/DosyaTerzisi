@@ -1,0 +1,14 @@
+{
+  "v": 1,
+  "id": 17,
+  "result": {
+    "path": "C:\\Belgeler",
+    "folders": [
+      {
+        "name": "Evrak",
+        "path": "C:\\Belgeler\\Evrak",
+        "hasChildren": true
+      }
+    ]
+  }
+}

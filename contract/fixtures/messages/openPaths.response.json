@@ -1,0 +1,20 @@
+{
+  "v": 1,
+  "id": 16,
+  "result": {
+    "folder": "C:\\Belgeler\\Evrak",
+    "list": {
+      "rows": [
+        {
+          "id": 3,
+          "name": "Öğrenci Şeması (2).xlsx",
+          "dir": "C:\\Belgeler\\Evrak",
+          "isDir": false,
+          "size": 55296,
+          "modified": 1760956200000
+        }
+      ],
+      "skippedFolders": 0
+    }
+  }
+}

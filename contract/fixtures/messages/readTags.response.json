@@ -1,0 +1,13 @@
+{
+  "v": 1,
+  "id": 26,
+  "result": {
+    "entries": [
+      {
+        "name": "ID3.Artist",
+        "value": "Sezen Aksu"
+      }
+    ],
+    "error": "Dosya bozuk"
+  }
+}

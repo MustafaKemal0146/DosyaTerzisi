@@ -1,0 +1,15 @@
+{
+  "v": 1,
+  "id": 25,
+  "method": "tagColumns",
+  "params": {
+    "ids": [
+      1,
+      2
+    ],
+    "names": [
+      "ID3.Artist",
+      "ID3.Album"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "v": 1,
+  "id": 30,
+  "method": "numberedPreview",
+  "params": {
+    "kind": "emptyFile",
+    "folder": "C:\\Belgeler\\Evrak",
+    "namePattern": "Hafta ??.txt",
+    "amount": 3,
+    "start": 1,
+    "step": 1,
+    "size": "10K",
+    "sourcePath": "C:\\Belgeler\\sablon.docx",
+    "numberStyle": "decimal"
+  }
+}

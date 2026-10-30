@@ -1,0 +1,13 @@
+{
+  "v": 1,
+  "id": 29,
+  "result": {
+    "restored": 2,
+    "failures": [
+      {
+        "path": "C:\\Belgeler\\Evrak\\a.txt",
+        "message": "→ b.txt: Dosya başka bir işlem tarafından kullanılıyor."
+      }
+    ]
+  }
+}

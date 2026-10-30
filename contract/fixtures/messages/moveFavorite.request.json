@@ -1,0 +1,9 @@
+{
+  "v": 1,
+  "id": 12,
+  "method": "moveFavorite",
+  "params": {
+    "id": "0f8fad5bd9cb469fa16570867728950e",
+    "delta": -1
+  }
+}

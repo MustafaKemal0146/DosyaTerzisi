@@ -1,0 +1,15 @@
+{
+  "v": 1,
+  "id": 3,
+  "method": "scan",
+  "params": {
+    "folder": "C:\\Belgeler\\Evrak",
+    "options": {
+      "includeFiles": true,
+      "includeFolders": false,
+      "filter": "*.jpg;*.png",
+      "recursive": true,
+      "depth": 10
+    }
+  }
+}

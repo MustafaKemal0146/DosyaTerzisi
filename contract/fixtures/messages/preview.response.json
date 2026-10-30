@@ -1,0 +1,25 @@
+{
+  "v": 1,
+  "id": 4,
+  "result": {
+    "rows": [
+      {
+        "id": 3,
+        "newName": "Öğrenci Şeması .xlsx",
+        "status": "ready",
+        "message": "Örnek ileti",
+        "destination": "D:\\Yedek"
+      },
+      {
+        "id": 4,
+        "newName": "Rapor.docx",
+        "status": "unchanged",
+        "message": null,
+        "destination": null
+      }
+    ],
+    "ready": 1,
+    "problems": 0,
+    "ruleError": ""
+  }
+}

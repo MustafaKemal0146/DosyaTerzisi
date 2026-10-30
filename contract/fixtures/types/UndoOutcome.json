@@ -1,0 +1,10 @@
+{
+  "description": "Çeviri: ÜüĞğ → UuGg",
+  "restored": 11,
+  "failures": [
+    {
+      "path": "C:\\Belgeler\\Evrak\\a.txt",
+      "message": "→ b.txt: Dosya başka bir işlem tarafından kullanılıyor."
+    }
+  ]
+}

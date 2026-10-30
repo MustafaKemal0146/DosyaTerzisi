@@ -1,0 +1,45 @@
+{
+  "folder": "C:\\Belgeler\\Evrak",
+  "presets": [
+    {
+      "id": "p8",
+      "title": "(n) sil",
+      "rule": {
+        "method": "regex",
+        "search": "(.*)\\(\\d+\\)(.*)",
+        "replace": "\\1\\2",
+        "caseSensitive": true
+      }
+    }
+  ],
+  "favorites": [
+    {
+      "id": "0f8fad5bd9cb469fa16570867728950e",
+      "name": "(n) sil",
+      "rule": {
+        "method": "regex",
+        "search": "(.*)\\(\\d+\\)(.*)",
+        "replace": "\\1\\2",
+        "caseSensitive": true
+      }
+    }
+  ],
+  "history": [
+    {
+      "id": "9b2e1c4f7a6d4e0f8c3b5a1d2e4f6a7b",
+      "description": "Çeviri: ÜüĞğ → UuGg",
+      "count": 12,
+      "time": 1760956300000
+    }
+  ],
+  "notices": [
+    {
+      "title": "Yarım kalan işlem",
+      "message": "Önceki yeniden adlandırma yarıda kalmış."
+    }
+  ],
+  "paths": [
+    "C:\\Belgeler\u0007.txt",
+    "C:\\Belgeler\b.txt"
+  ]
+}

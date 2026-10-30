@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "name": "Hafta 01.txt",
+      "status": "exists",
+      "message": "Bu adda bir öğe zaten var."
+    }
+  ],
+  "problem": "Hedef klasör bulunamadı.",
+  "ready": 0
+}

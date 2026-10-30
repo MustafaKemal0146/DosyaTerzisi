@@ -1,0 +1,16 @@
+{
+  "v": 1,
+  "id": 9,
+  "result": [
+    {
+      "id": "0f8fad5bd9cb469fa16570867728950e",
+      "name": "(n) sil",
+      "rule": {
+        "method": "regex",
+        "search": "(.*)\\(\\d+\\)(.*)",
+        "replace": "\\1\\2",
+        "caseSensitive": true
+      }
+    }
+  ]
+}

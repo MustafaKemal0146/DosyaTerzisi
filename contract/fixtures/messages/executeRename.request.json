@@ -1,0 +1,9 @@
+{
+  "v": 1,
+  "id": 6,
+  "method": "executeRename",
+  "params": {
+    "decision": "autoNumber",
+    "description": "Joker: * - * → \\1-\\2"
+  }
+}

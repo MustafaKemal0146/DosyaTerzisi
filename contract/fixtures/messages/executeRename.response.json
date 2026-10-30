@@ -1,0 +1,13 @@
+{
+  "v": 1,
+  "id": 6,
+  "result": {
+    "renamed": 11,
+    "failures": [
+      {
+        "path": "C:\\Belgeler\\Evrak\\a.txt",
+        "message": "→ b.txt: Dosya başka bir işlem tarafından kullanılıyor."
+      }
+    ]
+  }
+}

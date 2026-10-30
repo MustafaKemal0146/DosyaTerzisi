@@ -1,0 +1,9 @@
+{
+  "v": 1,
+  "id": 26,
+  "method": "readTags",
+  "params": {
+    "id": 3,
+    "shell": true
+  }
+}

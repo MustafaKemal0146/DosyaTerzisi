@@ -1,0 +1,20 @@
+{
+  "template": "<ID3.Artist> - <ID3.Track>.\\e",
+  "missing": "skip",
+  "numberStart": 1,
+  "numberStep": 1,
+  "resetNumberPerFolder": true,
+  "autoNumberOnConflict": false,
+  "useCreatedDate": true,
+  "selected": [
+    2,
+    4
+  ],
+  "operation": "rename",
+  "targetFolder": "",
+  "numberStyle": "letters",
+  "resetNumberPerDate": false,
+  "resetNumberPerTag": "ID3.Album",
+  "shortNames83": false,
+  "useScript": true
+}

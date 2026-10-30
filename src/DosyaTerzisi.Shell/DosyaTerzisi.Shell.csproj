@@ -1,0 +1,71 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>DosyaTerzisi.Shell</RootNamespace>
+    <AssemblyName>DosyaTerzisi</AssemblyName>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <Product>Dosya Terzisi</Product>
+    <AssemblyTitle>Dosya Terzisi</AssemblyTitle>
+    <Description>Dosya ve klasörleri toplu olarak yeniden adlandırma aracı</Description>
+    <Company>Dosya Terzisi</Company>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Copyright>© 2026</Copyright>
+    <RuntimeIdentifier Condition="'$(RuntimeIdentifier)' == ''">win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3719.77" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DosyaTerzisi.Bridge\DosyaTerzisi.Bridge.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Presets\OnAyarlar.txt" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <!--
+    Web arayüzü: web/ klasöründeki Next.js projesi statik olarak dışa aktarılır (web/out) ve exe'nin içine gömülür.
+    - Arayüz kaynakları değişmediyse `npm run build` çalışmaz (Inputs/Outputs).
+    - Node.js olmayan bir bilgisayarda derlemek için: dotnet build -p:SkipWebBuild=true (web/out hazır olmalı).
+  -->
+  <PropertyGroup>
+    <WebDir>$(MSBuildThisFileDirectory)..\..\web\</WebDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <WebSource Include="$(WebDir)app\**;$(WebDir)components\**;$(WebDir)lib\**;$(WebDir)package.json;$(WebDir)package-lock.json;$(WebDir)next.config.mjs;$(WebDir)tsconfig.json"
+               Exclude="$(WebDir)**\*.test.ts" />
+  </ItemGroup>
+
+  <Target Name="BuildWeb"
+          Inputs="@(WebSource)"
+          Outputs="$(WebDir)out\index.html"
+          Condition="'$(SkipWebBuild)' != 'true'">
+    <Exec Command="npm ci" WorkingDirectory="$(WebDir)" Condition="!Exists('$(WebDir)node_modules')" />
+    <Exec Command="npm run build" WorkingDirectory="$(WebDir)" />
+  </Target>
+
+  <Target Name="EmbedWeb" BeforeTargets="AssignTargetPaths" DependsOnTargets="BuildWeb">
+    <Error Condition="!Exists('$(WebDir)out\index.html')"
+           Text="web/out/index.html yok. Önce 'npm run build' çalıştırın (web klasöründe) ya da Node.js kurup yeniden derleyin." />
+    <ItemGroup>
+      <_WebFile Include="$(WebDir)out\**" />
+      <EmbeddedResource Include="@(_WebFile)" LogicalName="web/%(_WebFile.RecursiveDir)%(_WebFile.Filename)%(_WebFile.Extension)" />
+    </ItemGroup>
+  </Target>
+
+</Project>

@@ -1,0 +1,8 @@
+{
+  "v": 1,
+  "id": 11,
+  "method": "removeFavorite",
+  "params": {
+    "id": "0f8fad5bd9cb469fa16570867728950e"
+  }
+}

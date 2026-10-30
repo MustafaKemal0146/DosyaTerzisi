@@ -1,0 +1,18 @@
+{
+  "method": "wildcard",
+  "search": "* - *",
+  "replace": "\\1-\\2",
+  "caseSensitive": false,
+  "numberStart": 1,
+  "numberStep": 1,
+  "resetNumberPerFolder": false,
+  "autoNumberOnConflict": true,
+  "useCreatedDate": false,
+  "operation": "copy",
+  "targetFolder": "D:\\Yedek",
+  "numberStyle": "hexadecimal",
+  "resetNumberPerDate": true,
+  "resetNumberPerTag": "ID3.Album",
+  "shortNames83": true,
+  "useScript": true
+}

@@ -1,0 +1,11 @@
+{
+  "ready": 5,
+  "conflicts": [
+    {
+      "folder": "C:\\Belgeler\\Evrak",
+      "currentName": "a.txt",
+      "wantedName": "b.txt"
+    }
+  ],
+  "otherProblems": 1
+}

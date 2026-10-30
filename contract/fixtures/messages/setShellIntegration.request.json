@@ -1,0 +1,9 @@
+{
+  "v": 1,
+  "id": 20,
+  "method": "setShellIntegration",
+  "params": {
+    "folderMenu": true,
+    "sendTo": false
+  }
+}

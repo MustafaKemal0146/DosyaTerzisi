@@ -1,0 +1,7 @@
+{
+  "includeFiles": true,
+  "includeFolders": false,
+  "filter": "*.jpg;*.png",
+  "recursive": true,
+  "depth": 10
+}

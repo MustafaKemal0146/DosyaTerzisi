@@ -1,0 +1,6 @@
+{
+  "method": "regex",
+  "search": "(.*)\\(\\d+\\)(.*)",
+  "replace": "\\1\\2",
+  "caseSensitive": true
+}

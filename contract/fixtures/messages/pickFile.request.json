@@ -1,0 +1,9 @@
+{
+  "v": 1,
+  "id": 18,
+  "method": "pickFile",
+  "params": {
+    "title": "Dosya seçin",
+    "filter": "Tümü (*.*)|*.*"
+  }
+}

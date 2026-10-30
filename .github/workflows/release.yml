@@ -1,0 +1,53 @@
+name: Sürüm
+
+# v1.2.3 gibi bir etiket gönderilince paketi derler ve GitHub Releases'a yükler.
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Testler
+        run: |
+          cd web
+          npm ci
+          npm test
+          cd ..
+          dotnet test DosyaTerzisi.sln --configuration Release
+
+      - name: Paket
+        shell: pwsh
+        run: tools/publish.ps1
+
+      - name: SHA-256 özeti
+        shell: pwsh
+        run: |
+          $zip = Get-ChildItem release/*.zip | Select-Object -First 1
+          $hash = (Get-FileHash $zip.FullName -Algorithm SHA256).Hash.ToLower()
+          "$hash  $($zip.Name)" | Set-Content -Encoding ascii "release/$($zip.Name).sha256"
+
+      - name: Sürümü yayımla
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            release/*.zip
+            release/*.sha256
+          generate_release_notes: true
+          body_path: .github/release-notes.md

@@ -1,0 +1,37 @@
+{
+  "readOnly": "set",
+  "archive": "keep",
+  "hidden": "clear",
+  "system": "keep",
+  "modified": {
+    "action": "random",
+    "value": 1760956200000,
+    "shiftMinutes": -90,
+    "copyFrom": "created",
+    "randomTo": 1763548200000,
+    "seed": 7,
+    "limitMin": 1700000000000,
+    "limitMax": 1800000000000
+  },
+  "created": {
+    "action": "photoTaken",
+    "value": 0,
+    "shiftMinutes": 0,
+    "copyFrom": "modified",
+    "randomTo": 0,
+    "seed": 0,
+    "limitMin": 0,
+    "limitMax": 0
+  },
+  "accessed": {
+    "action": "copyFrom",
+    "value": 0,
+    "shiftMinutes": 0,
+    "copyFrom": "accessed",
+    "randomTo": 0,
+    "seed": 0,
+    "limitMin": 0,
+    "limitMax": 0
+  },
+  "includeFolders": true
+}

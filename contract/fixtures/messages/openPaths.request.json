@@ -1,0 +1,11 @@
+{
+  "v": 1,
+  "id": 16,
+  "method": "openPaths",
+  "params": {
+    "paths": [
+      "C:\\Belgeler\\Evrak",
+      "C:\\Belgeler\u0007.txt"
+    ]
+  }
+}

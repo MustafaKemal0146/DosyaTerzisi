@@ -1,0 +1,11 @@
+{
+  "v": 1,
+  "id": 21,
+  "method": "removeRows",
+  "params": {
+    "ids": [
+      2,
+      4
+    ]
+  }
+}

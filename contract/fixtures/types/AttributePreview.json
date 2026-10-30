@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "id": 3,
+      "before": {
+        "readOnly": false,
+        "archive": true,
+        "hidden": false,
+        "system": false
+      },
+      "after": {
+        "readOnly": true,
+        "archive": true,
+        "hidden": false,
+        "system": false
+      },
+      "modifiedBefore": 1760956200000,
+      "modifiedAfter": 1760956800000,
+      "createdBefore": 1760000000000,
+      "createdAfter": 1760000600000,
+      "accessedBefore": 1760956300000,
+      "accessedAfter": 1760956300000,
+      "status": "ready",
+      "message": "Çekim tarihi bulunamadı."
+    }
+  ],
+  "changed": 1,
+  "problems": 0
+}

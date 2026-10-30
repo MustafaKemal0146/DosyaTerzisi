@@ -1,0 +1,8 @@
+{
+  "v": 1,
+  "id": 7,
+  "error": {
+    "code": "failed",
+    "message": "Klasör bulunamadı: C:\\yok"
+  }
+}
