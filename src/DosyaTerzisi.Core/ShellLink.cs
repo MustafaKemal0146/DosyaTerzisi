@@ -6,6 +6,7 @@ namespace DosyaTerzisi.Core;
 /// Writes a Windows shortcut (.lnk) through the shell's own Unicode interfaces. The scripting host would write names
 /// with letters outside the system's ANSI code page (such as "ı" on an English Windows) wrongly or not at all.
 /// </summary>
+[System.Runtime.Versioning.SupportedOSPlatform("windows")]
 internal static class ShellLink
 {
     public static void Create(string target, string shortcutPath, string workingDirectory)

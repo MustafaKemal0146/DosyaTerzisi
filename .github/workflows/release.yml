@@ -41,7 +41,7 @@ jobs:
         run: |
           $zip = Get-ChildItem release/*.zip | Select-Object -First 1
           $hash = (Get-FileHash $zip.FullName -Algorithm SHA256).Hash.ToLower()
-          "$hash  $($zip.Name)" | Set-Content -Encoding ascii "release/$($zip.Name).sha256"
+          [IO.File]::WriteAllText("$PWD/release/$($zip.Name).sha256", "$hash  $($zip.Name)`n")
 
       - name: Sürümü yayımla
         uses: softprops/action-gh-release@v2
