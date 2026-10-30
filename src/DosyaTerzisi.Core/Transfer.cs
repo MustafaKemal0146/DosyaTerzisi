@@ -300,23 +300,16 @@ internal static class TransferExecutor
 
         if (!OperatingSystem.IsWindows()) throw new IOException("Kısayol oluşturma yalnızca Windows'ta kullanılabilir.");
 
-        var shellType = Type.GetTypeFromProgID("WScript.Shell") ?? throw new IOException("Kısayol oluşturma bu bilgisayarda kullanılamıyor.");
-        object shell = Activator.CreateInstance(shellType)!;
-        object? link = null;
         try
         {
-            dynamic s = shell;
-            link = s.CreateShortcut(shortcutPath);
-            dynamic l = link!;
-            l.TargetPath = target;
-            l.WorkingDirectory = targetIsFolder ? target : Path.GetDirectoryName(target) ?? "";
-            l.Save();
+            ShellLink.Create(target, shortcutPath, targetIsFolder ? target : Path.GetDirectoryName(target) ?? "");
         }
-        finally
+        catch (COMException ex)
         {
-            if (link is not null) Marshal.ReleaseComObject(link);
-            Marshal.ReleaseComObject(shell);
+            throw new IOException($"Kısayol oluşturulamadı: {ex.Message}", ex);
         }
+
+        if (!File.Exists(shortcutPath)) throw new IOException($"'{Path.GetFileName(shortcutPath)}' oluşturulamadı.");
     }
 
     [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
